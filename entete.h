@@ -24,6 +24,8 @@ int maximum(int tab[], int taille);
 
 int minimum(int tab[], int taille);
 
+void discretiser(int tab[], int taille,int pas,int* newtab, char *labels[]);
+
 void ploty(int tab[], int taille,SDL_Color col, char *ylabel, char *legend); 
 
 void plotxy(int tabx[], int taby[],int taille, SDL_Color col, char *labels[]);

@@ -24,3 +24,8 @@ Le code d'utilisation doit avoir cette tête:
 
   SDL_Quit();
   TTF_Quit();
+
+Pour utiliser ce code dans un projet existant il faut:
+
+  - Inclure les fichiers graphs.c et entete.h dans le projet 
+  - N'oubliez pas d'ajouter : #include "entete.h"

@@ -219,8 +219,30 @@ int minimum(int tab[], int taille)
 	}
    return (res);
 }
+/* =======================================================================================================*/
+void discretiser(int tab[], int taille,int pas,int* newtab, char *labels[])
+{
+  int max = maximum(tab, taille);
+  int min = minimum(tab, taille);
+  int nb =(max - min)/pas;
+  int k=0 , i=0;
+  char ch[20];
+  nb = (nb*pas == max- min)?nb:nb+1;
+  newtab =(int*)malloc(nb*sizeof(int));
+  for (i=0; i<taille; i++){
+    newtab[i]=0;
+  }
+  for(i=0; i<taille; i++){
+    k = (tab[i]-min)/pas;
+    newtab[k]++;
+  }
+  for(i=0; i<nb; i++){
+      sprintf(ch,"[%d,%d[",min+i*pas, min+(i+1)*pas);
+      labels[i] =ch;
+  }
 
- /*=======================================================================================================*/
+}
+/*=======================================================================================================*/
 void ploty(int tab[], int taille, SDL_Color col, char *ylabel, char *legend)
 {
     int px =700,py =560;
