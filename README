@@ -1,0 +1,26 @@
+
+Le code sert à
+ - Pour faire des courbes (graphes des fonctions) en c/c++
+ - Faire des diagrammes en baton  en c/c++
+
+Dependance: Librairies SDL 1.2, SDL_ttf 2.0
+
+Pour utiliser les cinq(5) fonctions (ploty, plotxy, nuage_point, barplot, barplot2)
+il faut:
+  - telecharger SDL 1.2 lien : https://www.libsdl.org/
+  - telecharger SDL_ttf 2.0 lien :https://www.libsdl.org/projects/SDL_ttf/
+
+  -Sous Linux/ubuntu: vous pouvez utilise le Makefile
+  
+  -Sous windows :
+
+Le code d'utilisation doit avoir cette tête:
+
+  SDL_Init(SDL_INIT_VIDEO);
+  TTF_Init();
+    
+    variables;
+    appel aux fonctions des graphes avec les bons paramètre;
+
+  SDL_Quit();
+  TTF_Quit();
